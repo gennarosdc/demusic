@@ -1,5 +1,5 @@
 # Demusic
-A democratic Jukebox integrated with Spotify
+A democratic Jukebox integrated with Spotify API
 
 
 To use app follow this steps:<br />
