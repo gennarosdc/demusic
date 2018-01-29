@@ -1,4 +1,4 @@
-# demusic
+# Demusic
 A democratic Jukebox integrated with Spotify
 
 
