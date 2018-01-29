@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+ <Configuration status="WARN">  
+    <Appenders>  
+        <File name="FileLogger" fileName="/opt/tomcat/logs/demusic.log">  
+           
+           <PatternLayout pattern="%d{dd-MM-yyyy HH:mm} [%t] %-5level %logger{36} - %msg%n"/>  
+       </File> 
+       <Console name="ConsoleLogger" target="SYSTEM_OUT"> 
+           
+           <PatternLayout pattern="%d{dd-MM-yyyy HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
+       </Console>    
+        <RollingFile name="file-log" fileName="/opt/tomcat/logs/demusic-info.log"
+            filePattern="/opt/tomcat/logs/demusic-info-%d{yyyy-MM-dd}.log">
+            <PatternLayout>
+            <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+            <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingFile>       
+    </Appenders>  
+    <Loggers> 
+       <Root level="trace">  
+           <AppenderRef ref="FileLogger"/>
+           <AppenderRef ref="ConsoleLogger"/> 
+           <AppenderRef ref="file-log"/> 
+       </Root>  
+    </Loggers>  
+ </Configuration>
+<!-- Change root level attribute to show only particular messages
+OFF	0
+FATAL	100
+ERROR	200
+WARN	300
+INFO	400
+DEBUG	500
+TRACE	600
+ALL 
+-->
