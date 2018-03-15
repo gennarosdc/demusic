@@ -1,6 +1,7 @@
 # Demusic
-A democratic Jukebox integrated with Spotify API
+Java web based application that implement a "democratic" jukebox.
 
+Users can vote songs in a party. System compute the votes and sort dynamically playlisyt playing in background. The application is integrated with Spotify Api.
 
 To use app follow this steps:<br />
 Create an Spotify Developer account.<br />
